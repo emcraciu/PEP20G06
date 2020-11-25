@@ -23,3 +23,5 @@ print(number3)
 print(dir(number1))
 print(dir(number2))
 print(number1.__add__(2))
+print(number1.__truediv__(2))
+
