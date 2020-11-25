@@ -29,7 +29,7 @@
 # Print in different bases
 print('Base2 number (0b0100) is printed in Base10:', 0b0100)
 print('Base8 number (0o17) is printed in Base10:', 0o17)
-print('Base8 number (0x1f) is printed in Base10:', 0x1f)
+print('Base16 number (0x1f) is printed in Base10:', 0x1f)
 print()
 
 # Exponent uses base 10
