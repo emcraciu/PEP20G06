@@ -122,7 +122,7 @@ print('Division:', number1.__truediv__(number2))
 print('Power, __pow__ is **:', number1.__pow__(number2), '==', number1 ** number2)
 print()
 
-# Example
+# Example for lower and upper case sequence
 result = ''
 a = 0
 for i in string1:
@@ -132,3 +132,5 @@ for i in string1:
         result = result + i.lower()
     a = a + 1
 print('Lower and upper char sequence:', result)
+print()
+
