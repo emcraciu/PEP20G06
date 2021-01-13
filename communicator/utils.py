@@ -18,3 +18,6 @@ def generate_primes(limit):
         if is_prime(i):
             result.append(i)
     return result
+
+print('name of module is:', __name__)
+print('name of package is:', __package__)
