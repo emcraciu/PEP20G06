@@ -1,4 +1,4 @@
-from communicator import Client, Server
+from communicator import Client, Server, crypt_decrypt
 
 # create instances
 client = Client(17, 2)
@@ -25,3 +25,9 @@ server.get_secret(client_number)
 print(f'Client number is: {client_number}; Server number is: {server_number}')
 print(f'Shared secret is: {client.secret} <->  {server.secret}')
 
+initial_string = 'Text to send to server'
+
+enc = crypt_decrypt(initial_string, client.secret)
+print(enc)
+dec = crypt_decrypt(enc, server.secret)
+print(dec)

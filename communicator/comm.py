@@ -36,7 +36,7 @@ class Client:
         return self.number_to_send
 
     def get_secret(self, secret):
-        self.secret = pow(secret, self.local_secret) % self.prime
+        self.secret = pow(secret, self.local_secret) % self.prime + 129
 
 
 class Server():
@@ -56,4 +56,4 @@ class Server():
         return self.number_to_send
 
     def get_secret(self, secret):
-        self.secret = pow(secret, self.local_secret) % self.prime
+        self.secret = pow(secret, self.local_secret) % self.prime + 129
