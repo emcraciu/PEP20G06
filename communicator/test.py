@@ -23,11 +23,11 @@ client.get_secret(server_number)
 server.get_secret(client_number)
 
 print(f'Client number is: {client_number}; Server number is: {server_number}')
-print(f'Shared secret is: {client.secret} <->  {server.secret}')
+print(f'Shared secret is: {client._Client__secret} <-> {server._Server__secret}')
 
 initial_string = 'Text to send to server'
 
-enc = crypt_decrypt(initial_string, client.secret)
+enc = crypt_decrypt(initial_string, client._Client__secret)
 print(enc)
-dec = crypt_decrypt(enc, server.secret)
+dec = crypt_decrypt(enc, server._Server__secret)
 print(dec)

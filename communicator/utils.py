@@ -1,3 +1,6 @@
+import random
+
+
 def crypt_decrypt(string, key):
     result = []
     for letter in string:
@@ -19,5 +22,18 @@ def generate_primes(limit):
             result.append(i)
     return result
 
+
+def select_primes(number_of_values, limit):
+    result = []
+    primes_list = generate_primes(limit)
+    for _ in range(number_of_values):
+        count = len(primes_list)
+        selector = random.randint(0, count - 1)
+        result.append(primes_list.pop(selector))
+    result.sort()
+    return result
+
+
+print(select_primes(2, 542))
 print('name of module is:', __name__)
 print('name of package is:', __package__)

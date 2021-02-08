@@ -43,7 +43,7 @@ print('number 19 is prime:', communicator.is_prime(19))
 
 # recursive functions
 # 3! = 1*2*3
-def factorial(n):
+def factorial(n: int):
     result = 1
     for i in range(1, n + 1):
         result *= i
@@ -53,7 +53,7 @@ def factorial(n):
 print(factorial(3))
 
 
-def factorial(n):
+def factorial(n: int):
     if n == 0:
         return 1
     else:
@@ -79,12 +79,13 @@ def flatten_list_to_tuple(list_to_flatten):
 
 
 # variables (global, non-local, local)
-VAR1 = 'my var to print'
+VAR1 = 'global'
 
 
-def outer(arg1):
+def outer():
     global VAR1
-    VAR1 = 'some new message'
+    print('Global outer:')
+    VAR1 = ''
     VAR2 = 'inside outer'
     VAR3 = 'var3'
     print(outer.__name__, VAR1)
@@ -110,6 +111,7 @@ x(10)
 
 def conversation():
     name_ = ''
+
     def hello(name='sir'):
         nonlocal name_
         name_ = name

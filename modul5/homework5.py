@@ -1,5 +1,6 @@
 """ Homework 5 - needs to be presented before exam day"""
 
+
 # We want to create class for an object that behaves like a triangle, that has flexible sides and angles.
 # Because of approximations in python the triangle will get distorted after some of the changes so this is not a
 # perfect model
@@ -33,8 +34,6 @@
 # If as a result of the change side will be less then or equal to 0 then method should raise a different exception
 # When a side is modified by some value all other sides need to be modified by the fraction of the change to maintain
 # the same triangle angles. For example if A increase by +1 then B = ((A+1)/A)*B and C = ((A+1)/A)*C
-
-from math import cos, acos
 
 
 class Triangle():

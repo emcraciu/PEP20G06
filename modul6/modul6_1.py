@@ -39,12 +39,12 @@ class IntIterator():
         return self.listed_number.pop(0)
 
 
-class IntObject():
+class IntObject(int):
     def __init__(self, nr):
-        self.nr = nr
+        super().__init__(nr)
 
     def __iter__(self):
-        return IntIterator(self.nr)
+        return IntIterator(self)
 
 
 int_object = IntObject(3)

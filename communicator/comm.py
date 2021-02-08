@@ -11,6 +11,7 @@ class Client:
     """
     Class Documentation
     """
+    __secret = None
 
     def __init__(self, data1, data2):
         """
@@ -36,10 +37,12 @@ class Client:
         return self.number_to_send
 
     def get_secret(self, secret):
-        self.secret = pow(secret, self.local_secret) % self.prime + 129
+        self.__secret = pow(secret, self.local_secret) % self.prime + 129
 
 
 class Server():
+    __secret = None
+
     def __init__(self, data1, data2):
         self.data1 = data1
         self.data2 = data2
@@ -56,4 +59,4 @@ class Server():
         return self.number_to_send
 
     def get_secret(self, secret):
-        self.secret = pow(secret, self.local_secret) % self.prime + 129
+        self.__secret = pow(secret, self.local_secret) % self.prime + 129

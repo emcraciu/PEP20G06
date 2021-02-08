@@ -112,7 +112,7 @@ string_2 = string1[::-1]
 print('Rearranged string (reversed):', string_2)
 
 # Reverse letters and rearrange odd and even:
-string_2 = string1[-1::-2] + string1[-2::-2]
+string_2 = string1[-1::-3] + string1[-2::-3]
 print('Rearranged string (reversed, odd and even):', string_2)
 print()
 
